@@ -1,0 +1,10 @@
+#!/bin/sh
+
+stack --stack-yaml stack-ghc.yaml setup
+
+stack --stack-yaml stack-ghcjs.yaml setup
+
+PATH="$PATH:$(stack --stack-yaml stack-ghc.yaml path --compiler-bin)" \
+    stack --stack-yaml stack-ghcjs.yaml build
+
+stack --stack-yaml stack-ghc.yaml build

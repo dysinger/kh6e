@@ -1,0 +1,10 @@
+resolver: lts-5.18
+
+packages:
+- 'common'
+- 'servant'
+- 'yesod'
+
+image:
+  container:
+    base: dysinger/kh6e:base

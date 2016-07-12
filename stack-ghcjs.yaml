@@ -1,0 +1,26 @@
+resolver: lts-5.18
+
+packages:
+- 'common'
+- 'reflex'
+- location:
+    git: https://github.com/reflex-frp/reflex.git
+    commit: f8338f6b68c9be4e8dcddbbab2098aeffa018535
+  extra-dep: true
+- location:
+    git: https://github.com/reflex-frp/reflex-dom.git
+    commit: e8b7d31fd2b6a8173e51096b7591ec346e33ad85
+  extra-dep: true
+
+compiler: ghcjs-0.2.0.20160628_ghc-7.10.3
+compiler-check: match-exact
+setup-info:
+  ghcjs:
+    source:
+      ghcjs-0.2.0.20160628_ghc-7.10.3:
+        url: https://s3.amazonaws.com/ghcjs/ghcjs-0.2.0.20160628_ghc-7.10.3.tar.gz
+        sha1: 64c12de17f1961ae27135a7b69190a32c866776c
+
+extra-deps:
+- ghcjs-dom-0.2.4.0
+- ref-tf-0.4
